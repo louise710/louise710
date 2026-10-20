@@ -66,6 +66,12 @@
 
   const receipts = [
     {
+      img: "assets/events/psc-central-visayas-top25-timble.jpg",
+      alt: "Philippine Startup Challenge Central Visayas Top 25 Qualifier announcement for TIMBLE by Team CascadeZero, University of San Jose–Recoletos",
+      title: "Philippine Startup Challenge", sub: "Central Visayas Top 25 Qualifier · TIMBLE",
+      desc: "TIMBLE, by Team CascadeZero from the University of San Jose–Recoletos, was named a Central Visayas Top 25 Qualifier in the Philippine Startup Challenge (DICT Region VII). TIMBLE gives schools one workspace to plan subject offerings, open sections, and prepare class schedules, using historical enrollment and curriculum data to suggest how many sections to open.",
+    },
+    {
       img: "assets/certificates/ipbl-2026-unique-quadro-award.jpg",
       alt: "Unique Quadro Award certificate awarded to team Stellar-One, IPBL 2026",
       title: "Unique Quadro Award", sub: "IPBL 2026 · awarded to team Stellar-One",
