@@ -6,9 +6,7 @@
 
 <p align="center">
   <a href="mailto:louisefrancinemoira.canedo.23@usjr.edu.ph"><img src="https://img.shields.io/badge/Email-louisefrancinemoira.canedo.23%40usjr.edu.ph-D14836?logo=gmail&logoColor=white" alt="Email"/></a>
-  <!-- TODO: add LinkedIn badge once URL is provided
-  <a href="LINKEDIN_URL"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
-  -->
+  <a href="https://www.linkedin.com/in/louiseca%C3%B1edo/"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
   <a href="https://github.com/louise710"><img src="https://img.shields.io/badge/GitHub-louise710-181717?logo=github&logoColor=white" alt="GitHub"/></a>
 </p>
 

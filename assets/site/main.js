@@ -16,18 +16,32 @@
       title: "Alliance Meeting Room Booking System", sub: "Web app · Full-stack",
       desc: "Full-stack booking system that manages room schedules, streamlines reservations, and prevents booking conflicts.",
       stack: "React · C# / .NET · SQL", source: "Private (company/school work)",
+      shots: [
+        ["assets/projects/marshal-available-rooms.jpg", "Available Rooms page listing bookable rooms with capacity, amenities and status"],
+        // ["assets/projects/marshal-booking-calendar.jpg", "Booking screen with a monthly calendar, day schedule and recurring booking form"],
+        // ["assets/projects/marshal-admin-stats.jpg", "Admin stats dashboard showing bookings per room and monthly bookings"],
+      ],
     },
     {
       code: "EL", variant: "gold", tags: ["web"],
       title: "USJR E-Logbook", sub: "Web app · USJ-R",
       desc: "Digital logbook for tracking and managing records at USJ-R, streamlining administrative workflows.",
       source: "Private (company/school work)",
+      shots: [
+        ["assets/projects/comms-dashboard.jpg", "Communication System dashboard with status counters and recent communications"]
+        // ["assets/projects/comms-communication-detail.jpg", "Communication detail view with status, document and approval route"],
+      ],
     },
     {
       code: "IoT", variant: "maroon", tags: ["iot"],
       title: "Classroom Automation / Room Management", sub: "IoT · USJ-R",
       desc: "IoT system that remotely controls classroom lighting and environmental conditions over MQTT, used at USJ-R.",
       stack: "MQTT", source: "Private",
+      shots: [
+        ["assets/projects/rms-home.jpg", "Room Management System home showing AC and light status for each classroom"],
+        ["assets/projects/rms-room-schedule.jpg", "Room SA 320 device controls and class schedule"],
+        ["assets/projects/rms-login.jpg", "Room Management System login page"],
+      ],
     },
     {
       code: "SG", variant: "yellow", tags: ["iot"],
@@ -40,21 +54,28 @@
       title: "TIMBLE", sub: "Undergraduate thesis · AI & optimization",
       desc: "A single workspace to plan subject offerings, open sections, and prepare class schedules. TIMBLE estimates subject demand from historical enrollment and curriculum data, then suggests suitable section numbers. Under the hood, a hybrid CSP + PPO reinforcement learning approach handles timetabling and faculty loading: OR-Tools CP-SAT enforces hard constraints (room capacity, faculty availability, prerequisites) and PPO balances timetables and faculty workloads. Philippine Startup Challenge Central Visayas Top 25 Qualifier (Team CascadeZero).",
       stack: "Python · OR-Tools CP-SAT · PPO", source: "Private",
+      shots: [["assets/events/psc-central-visayas-top25-timble.jpg", "TIMBLE logo on the Philippine Startup Challenge Central Visayas Top 25 Qualifier announcement"]],
     },
     {
       code: "AQ", variant: "maroon", tags: ["ai"],
       title: "AutoQuad", sub: "Computer vision · IPBL 2026",
       desc: "Computer vision system built with an international project-based learning team for the Autonomous Quadruped Challenge. Team Stellar-One received the Unique Quadro Award.",
+      shots: [
+        ["assets/projects/autoquad-robot.jpg", "AutoQuad quadruped robot with a Raspberry Pi and servo legs on a workbench"],
+        ["assets/events/ipbl-2026-award-group-photo.jpg", "Team Stellar-One with mentors receiving the Unique Quadro Award at IPBL 2026"],
+      ],
     },
     {
       code: "PR", variant: "yellow", tags: ["ai"],
       title: "Vehicle Plate Number Recognition", sub: "Computer vision",
       desc: "Computer vision pipeline that detects and reads vehicle license plates from images.",
+      shots: [["assets/projects/plate-recognition-demo.jpg", "Live demo detecting and reading the plate number 2021 from a phone screen"]],
     },
     {
       code: "TII", variant: "gold", tags: ["ai"],
       title: "Trash Intensification Index", sub: "NLP",
       desc: "NLP techniques to analyze and evaluate trends in waste-related data.",
+      shots: [["assets/projects/trash-intensification-detection.jpg", "Trash Intensification app detecting 74 garbage objects in a photo"]],
     },
     {
       code: "FP", variant: "maroon", tags: ["ai"],
@@ -66,10 +87,9 @@
 
   const receipts = [
     {
-      img: "assets/events/psc-central-visayas-top25-timble.jpg",
-      alt: "Philippine Startup Challenge Central Visayas Top 25 Qualifier announcement for TIMBLE by Team CascadeZero, University of San Jose–Recoletos",
-      title: "Philippine Startup Challenge", sub: "Central Visayas Top 25 Qualifier · TIMBLE",
-      desc: "TIMBLE, by Team CascadeZero from the University of San Jose–Recoletos, was named a Central Visayas Top 25 Qualifier in the Philippine Startup Challenge (DICT Region VII). TIMBLE gives schools one workspace to plan subject offerings, open sections, and prepare class schedules, using historical enrollment and curriculum data to suggest how many sections to open.",
+      code: "SCS", variant: "maroon",
+      title: "SCS Hackathon Days", sub: "Hackathon · Participant",
+      desc: "Joined SCS Hackathon Days.",
     },
     {
       img: "assets/certificates/ipbl-2026-unique-quadro-award.jpg",
@@ -90,12 +110,6 @@
       desc: "Completed the Alliance Software Engineering Certificate Program for S.Y. 2024–2026, with training in quality assurance, React JS, C#, and project management.",
     },
     {
-      img: "assets/events/alliance-culmination-2025.jpg",
-      alt: "Alliance Software Engineering Certificate Program culmination rites, December 2025",
-      title: "Alliance Culmination Rites", sub: "Event · Dec 2025",
-      desc: "Culmination rites of the Alliance Software Engineering Certificate Program.",
-    },
-    {
       code: "L2", variant: "gold",
       title: "TOPCIT — Level 2", sub: "Test of Practical Competency in IT · 2026",
       desc: "Reached Level 2 in TOPCIT, the Test of Practical Competency in IT.",
@@ -106,7 +120,8 @@
       desc: "TESDA AI Upskilling Training Program. Certificate pending.",
     },
     {
-      code: "PSC", variant: "yellow",
+      img: "assets/events/psc-central-visayas-top25-timble.jpg",
+      alt: "Philippine Startup Challenge Central Visayas Top 25 Qualifier announcement for TIMBLE by Team CascadeZero, University of San Jose–Recoletos",
       title: "PSC Regional Competition", sub: "Philippine Startup Challenge · Central Visayas Top 25", badge: "Ongoing",
       desc: "TIMBLE, by Team CascadeZero from the University of San Jose–Recoletos, was named a Central Visayas Top 25 Qualifier in the Philippine Startup Challenge (PSC) regional competition.",
     },
@@ -185,30 +200,64 @@
   const projectList = $("#project-list");
   projectList.innerHTML = projects
     .map(
-      (p, i) => `<li data-tags="${p.tags.join(" ")}">
-        <button class="card" type="button" data-index="${i}" aria-haspopup="dialog">
-          <div class="card-art">${art(p.variant, p.code, 300, 375)}</div>
+      (p, i) => `<li class="reveal" data-tags="${p.tags.join(" ")}" style="transition-delay:${(i % 4) * 70}ms">
+        <button class="tile" type="button" data-index="${i}" aria-haspopup="dialog">
+          <div class="tile-media">
+            ${p.shots ? `<img src="${p.shots[0][0]}" alt="${esc(p.shots[0][1])}" loading="lazy" />` : art(p.variant, p.code, 320, 240)}
+            <span class="zoom">Details</span>
+          </div>
           <h3>${esc(p.title)}</h3>
           <p>${esc(p.sub)}</p>
-          <span class="more">View details →</span>
+        </button>
+      </li>`
+    )
+    .join("");
+
+  projectList.addEventListener("click", (e) => {
+    const tile = e.target.closest(".tile");
+    if (!tile) return;
+    const order = $$("li:not(.hidden) .tile", projectList).map((t) => Number(t.dataset.index));
+    openModal(order.map((i) => ({ kind: "project", item: projects[i] })), order.indexOf(Number(tile.dataset.index)), tile);
+  });
+
+  $$("#work .chip").forEach((chip, _, all) =>
+    chip.addEventListener("click", () => {
+      all.forEach((c) => { c.classList.toggle("is-on", c === chip); c.setAttribute("aria-pressed", c === chip); });
+      const f = chip.dataset.filter;
+      $$("li", projectList).forEach((li) => li.classList.toggle("hidden", f !== "all" && !li.dataset.tags.split(" ").includes(f)));
+    })
+  );
+
+  /* ------------------------------------------------------------ receipts */
+
+  const receiptList = $("#receipt-list");
+  receiptList.innerHTML = receipts
+    .map(
+      (r, i) => `<li>
+        <button class="card" type="button" data-index="${i}" aria-haspopup="dialog">
+          <div class="card-art">${r.img ? `<img src="${r.img}" alt="${esc(r.alt)}" loading="lazy" />` : art(r.variant, r.code, 300, 375)}</div>
+          <h3>${esc(r.title)}</h3>
+          <p>${esc(r.sub)}</p>
+          ${r.badge ? `<span class="badge">${esc(r.badge)}</span>` : ""}
+          <span class="more">${r.img ? "View" : "Details"} →</span>
         </button>
         <svg class="sep" viewBox="0 0 40 40" aria-hidden="true"><use href="#star"/></svg>
       </li>`
     )
     .join("");
 
-  const carousel = $(".carousel");
-  const arrows = $$(".work-controls .arrow");
+  const carousel = $("#receipts .carousel");
+  const arrows = $$("#receipts .arrow");
 
   function layoutCards() {
-    const visible = $$("li:not(.hidden)", projectList);
-    visible.forEach((li, i) => {
+    const items = $$("li", receiptList);
+    items.forEach((li, i) => {
       const card = $(".card", li);
       card.classList.toggle("offset", i % 2 === 1);
       // Re-render art so the square/tall shape matches the card's slot.
-      const p = projects[card.dataset.index];
-      $(".card-art", card).innerHTML = art(p.variant, p.code, 300, i % 2 ? 300 : 375);
-      $(".sep", li).style.visibility = i === visible.length - 1 ? "hidden" : "";
+      const r = receipts[card.dataset.index];
+      if (!r.img) $(".card-art", card).innerHTML = art(r.variant, r.code, 300, i % 2 ? 300 : 375);
+      $(".sep", li).style.visibility = i === items.length - 1 ? "hidden" : "";
     });
     updateArrows();
   }
@@ -220,7 +269,7 @@
   }
 
   function step(dir) {
-    const card = $("li:not(.hidden)", projectList);
+    const card = $("li", receiptList);
     const amount = card ? card.getBoundingClientRect().width : 400;
     carousel.scrollBy({ left: dir * amount, behavior: reduceMotion ? "auto" : "smooth" });
   }
@@ -258,49 +307,13 @@
     if (Math.abs(e.deltaY) > Math.abs(e.deltaX) && e.shiftKey) { carousel.scrollLeft += e.deltaY; e.preventDefault(); }
   }, { passive: false });
 
-  $$(".work-controls .chip").forEach((chip, _, all) =>
-    chip.addEventListener("click", () => {
-      all.forEach((c) => { c.classList.toggle("is-on", c === chip); c.setAttribute("aria-pressed", c === chip); });
-      const f = chip.dataset.filter;
-      $$("li", projectList).forEach((li) => li.classList.toggle("hidden", f !== "all" && !li.dataset.tags.split(" ").includes(f)));
-      carousel.scrollTo({ left: 0 });
-      layoutCards();
-    })
-  );
-
-  projectList.addEventListener("click", (e) => {
+  receiptList.addEventListener("click", (e) => {
     const card = e.target.closest(".card");
     if (!card || suppressClick) return;
-    const order = $$("li:not(.hidden) .card", projectList).map((c) => Number(c.dataset.index));
-    openModal(order.map((i) => ({ kind: "project", item: projects[i] })), order.indexOf(Number(card.dataset.index)), card);
+    openModal(receipts.map((r) => ({ kind: "receipt", item: r })), Number(card.dataset.index), card);
   });
 
   layoutCards();
-
-  /* ------------------------------------------------------------ receipts */
-
-  const receiptList = $("#receipt-list");
-  receiptList.innerHTML = receipts
-    .map(
-      (r, i) => `<li class="reveal" style="transition-delay:${(i % 4) * 70}ms">
-        <button class="receipt" type="button" data-index="${i}" aria-haspopup="dialog">
-          <div class="receipt-media">
-            ${r.img ? `<img src="${r.img}" alt="${esc(r.alt)}" loading="lazy" />` : art(r.variant, r.code, 320, 240)}
-            <span class="zoom">${r.img ? "View" : "Details"}</span>
-          </div>
-          <h3>${esc(r.title)}</h3>
-          <p>${esc(r.sub)}</p>
-          ${r.badge ? `<span class="badge">${esc(r.badge)}</span>` : ""}
-        </button>
-      </li>`
-    )
-    .join("");
-
-  receiptList.addEventListener("click", (e) => {
-    const btn = e.target.closest(".receipt");
-    if (!btn) return;
-    openModal(receipts.map((r) => ({ kind: "receipt", item: r })), Number(btn.dataset.index), btn);
-  });
 
   /* -------------------------------------------------------------- skills */
 
@@ -321,6 +334,7 @@
     $$(".skill", skillList).forEach((s) => {
       s.style.transitionDelay = "0ms";
       s.classList.toggle("dim", cat !== "All" && s.dataset.cat !== cat);
+      s.classList.toggle("match", cat !== "All" && s.dataset.cat === cat);
     });
   });
 
@@ -334,9 +348,15 @@
 
   function renderModal() {
     const { kind, item } = mItems[mIndex];
+    const shots = item.shots || (item.img ? [[item.img, item.alt]] : []);
     let media;
-    if (item.img) media = `<img src="${item.img}" alt="${esc(item.alt)}" />`;
-    else media = `<div class="modal-art">${art(item.variant, item.code, 800, 350)}</div>`;
+    if (shots.length) {
+      media = `<img class="modal-shot" src="${shots[0][0]}" alt="${esc(shots[0][1])}" />`;
+      if (shots.length > 1)
+        media += `<div class="modal-thumbs">${shots
+          .map(([src, alt], i) => `<button type="button" class="${i ? "" : "is-on"}" data-shot="${i}" aria-label="Show picture ${i + 1} of ${shots.length}" aria-pressed="${!i}"><img src="${src}" alt="" /></button>`)
+          .join("")}</div>`;
+    } else media = `<div class="modal-art">${art(item.variant, item.code, 800, 350)}</div>`;
 
     const rows = [];
     if (kind === "project") {
@@ -367,6 +387,15 @@
   }
 
   modalSteps.forEach((b) => b.addEventListener("click", () => moveModal(Number(b.dataset.step))));
+  modalBody.addEventListener("click", (e) => {
+    const thumb = e.target.closest("[data-shot]");
+    if (!thumb) return;
+    const { item } = mItems[mIndex];
+    const [src, alt] = item.shots[Number(thumb.dataset.shot)];
+    const main = $(".modal-shot", modalBody);
+    main.src = src; main.alt = alt;
+    $$("[data-shot]", modalBody).forEach((b) => { b.classList.toggle("is-on", b === thumb); b.setAttribute("aria-pressed", b === thumb); });
+  });
   $(".modal-close", modal).addEventListener("click", () => modal.close());
   modal.addEventListener("click", (e) => { if (e.target === modal) modal.close(); });
   modal.addEventListener("keydown", (e) => {
