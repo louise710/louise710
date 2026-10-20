@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Louise Cañedo · Portfolio</title>
+  <meta name="description" content="Louise Francine Moira Cañedo: 4th-year Computer Science student in Cebu City building full-stack systems, IoT, and applied AI. Open for practicum / OJT." />
+  <meta name="theme-color" content="#33302e" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@700;800;900&family=DM+Serif+Display&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/site/style.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav" id="top">
+    <a class="logo" href="#top" aria-label="Louise Cañedo, back to top">
+      <svg class="logo-star" viewBox="0 0 40 40" aria-hidden="true"><use href="#star" /></svg>
+      <span>Louise<br />Cañedo</span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+      <span></span><span></span>
+    </button>
+    <nav id="nav-links" class="nav-links" aria-label="Main">
+      <a href="#work">Work</a>
+      <a href="#receipts">Receipts</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a class="btn btn-yellow" href="#contact">Hire me</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" aria-label="Introduction">
+      <div class="hero-art" aria-hidden="true">
+        <svg class="shape striped-hex" data-depth="18" viewBox="0 0 100 100">
+          <defs>
+            <pattern id="hero-stripes" patternUnits="userSpaceOnUse" width="12" height="12" patternTransform="rotate(-35)">
+              <rect width="5" height="12" fill="#ecdc78" />
+            </pattern>
+            <clipPath id="hero-hex-clip"><polygon points="50,2 92,26 92,74 50,98 8,74 8,26" /></clipPath>
+          </defs>
+          <g clip-path="url(#hero-hex-clip)"><rect width="100" height="100" fill="url(#hero-stripes)" /></g>
+          <polygon points="50,2 92,26 92,74 50,98 8,74 8,26" fill="none" stroke="#ecdc78" stroke-width="2.4" />
+        </svg>
+        <svg class="shape maroon-hex" data-depth="-28" viewBox="0 0 100 100"><polygon points="50,2 92,26 92,74 50,98 8,74 8,26" fill="#a04646" /></svg>
+        <svg class="shape small-hex a" data-depth="34" viewBox="0 0 100 100"><polygon points="50,6 88,28 88,72 50,94 12,72 12,28" fill="none" stroke="#d9a057" stroke-width="8" /></svg>
+        <svg class="shape small-hex b" data-depth="-20" viewBox="0 0 100 100"><polygon points="50,6 88,28 88,72 50,94 12,72 12,28" fill="none" stroke="#d9a057" stroke-width="8" /></svg>
+        <svg class="shape hero-star spin" data-depth="12" viewBox="0 0 40 40"><use href="#star" /></svg>
+        <span class="shape dot" data-depth="40"></span>
+      </div>
+
+      <h1 class="hero-title">
+        <span class="first" aria-label="Louise"><span>L</span><span>O</span><span>U</span><span>I</span><span>S</span><span>E</span></span>
+        <span class="last">Cañedo</span>
+      </h1>
+      <span class="pill pill-maroon hero-pill">Open for<br />OJT!</span>
+      <p class="hero-intro">
+        4th-year Computer Science student who builds <mark>full-stack systems</mark>, <mark>IoT</mark> that controls real classrooms, and <mark>AI</mark> for university timetabling. I take projects from problem to deployment — and I'm looking for a <mark>practicum / OJT</mark> placement.
+      </p>
+    </section>
+
+    <!-- TICKER -->
+    <div class="ticker">
+      <div class="ticker-social">
+        <span class="ticker-label">Find me<br />online:</span>
+        <a href="https://github.com/louise710" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24"><use href="#i-github" /></svg></a>
+        <a href="mailto:louisefrancinemoira.canedo.23@usjr.edu.ph" aria-label="Email"><svg viewBox="0 0 24 24"><use href="#i-mail" /></svg></a>
+      </div>
+      <div class="ticker-track" aria-label="Open for practicum / OJT · Full-stack · IoT · Applied AI · Cebu City, PH">
+        <div class="ticker-move" aria-hidden="true"></div>
+      </div>
+    </div>
+
+    <!-- WORK -->
+    <section class="section" id="work">
+      <div class="section-head reveal">
+        <h2>I build <em>things</em></h2>
+        <span class="pill pill-maroon tilt">Really!</span>
+      </div>
+      <div class="work-controls reveal">
+        <div class="chips" role="group" aria-label="Filter projects">
+          <button class="chip is-on" data-filter="all" aria-pressed="true">All</button>
+          <button class="chip" data-filter="web" aria-pressed="false">Web</button>
+          <button class="chip" data-filter="iot" aria-pressed="false">IoT</button>
+          <button class="chip" data-filter="ai" aria-pressed="false">AI &amp; CV</button>
+        </div>
+        <div class="arrows">
+          <button class="arrow" data-dir="-1" aria-label="Previous projects"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" /></svg></button>
+          <button class="arrow" data-dir="1" aria-label="Next projects"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" /></svg></button>
+        </div>
+      </div>
+      <div class="carousel" tabindex="0" aria-label="Projects, scroll or drag sideways">
+        <ul class="carousel-track" id="project-list"></ul>
+      </div>
+      <p class="hint reveal">Drag, scroll, or use the arrows. Click a project for details.</p>
+    </section>
+
+    <!-- RECEIPTS -->
+    <section class="section" id="receipts">
+      <div class="section-head reveal">
+        <h2>The <em>receipts</em></h2>
+        <span class="pill pill-maroon tilt">Proof!</span>
+      </div>
+      <ul class="receipts" id="receipt-list"></ul>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+      <div class="about-inner">
+        <div class="about-intro reveal">
+          <h2><span>Forever</span><span class="boxed">A learner</span></h2>
+          <p>A Computer Science student in Cebu City who likes the whole journey of a project — from formulating the problem to getting it deployed. My work spans web systems, IoT over MQTT, and applied AI: reinforcement learning, constraint programming, computer vision and NLP.</p>
+          <p>Right now I'm looking for a practicum / OJT where I can ship real features with a real team.</p>
+          <span class="pill pill-dark tilt">Graduating<br />2027!</span>
+        </div>
+        <div class="about-col reveal">
+          <h3>Education</h3>
+          <dl>
+            <dt>B.S. Computer Science</dt>
+            <dd>University of San Jose–Recoletos, Cebu City<small>Expected graduation: July 2027</small></dd>
+            <dt>Undergraduate thesis</dt>
+            <dd>TIMBLE — hybrid CSP + PPO reinforcement learning for university timetabling and faculty loading<small>Philippine Startup Challenge · Central Visayas Top 25 Qualifier</small></dd>
+          </dl>
+        </div>
+        <div class="about-col reveal">
+          <h3>Training &amp; events</h3>
+          <dl>
+            <dt>Alliance Software Engineering Certificate Program</dt>
+            <dd><small>S.Y. 2024–2026 · completed Dec 2025</small></dd>
+            <dt>International Project-Based Learning (IPBL) 2026</dt>
+            <dd><small>Autonomous Quadruped Challenge · Aug 2026</small></dd>
+            <dt>TOPCIT — Level 2</dt>
+            <dd><small>2026</small></dd>
+            <dt>TESDA AI Upskilling Training Program</dt>
+            <dd><small>In progress</small></dd>
+          </dl>
+        </div>
+        <svg class="about-star" viewBox="0 0 40 40" aria-hidden="true"><use href="#star" /></svg>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="section-head center reveal">
+        <svg class="head-star spin" viewBox="0 0 40 40" aria-hidden="true"><use href="#star" /></svg>
+        <h2>Skills? Got <em>some</em></h2>
+        <svg class="head-star spin rev" viewBox="0 0 40 40" aria-hidden="true"><use href="#star" /></svg>
+      </div>
+      <div class="chips center reveal" role="group" aria-label="Filter skills" id="skill-filters"></div>
+      <ul class="skills" id="skill-list"></ul>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact" id="contact">
+      <div class="contact-copy reveal">
+        <h2>So, wanna work <em>together?</em></h2>
+        <span class="pill pill-maroon tilt">Pls say<br />yes</span>
+        <p>Hiring for a practicum / OJT? Send me a message — I'd love to chat about how I can help your team.</p>
+        <button class="copy-email" type="button" data-email="louisefrancinemoira.canedo.23@usjr.edu.ph">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-mail" /></svg>
+          <span>louisefrancinemoira.canedo.23@usjr.edu.ph</span>
+          <em>Copy</em>
+        </button>
+      </div>
+      <form class="contact-form reveal" id="contact-form" novalidate>
+        <label for="f-name">Name</label>
+        <input id="f-name" name="name" type="text" placeholder="Your name" autocomplete="name" />
+        <label for="f-email">Your email*</label>
+        <input id="f-email" name="email" type="email" placeholder="Your email address" autocomplete="email" required />
+        <span class="err" id="err-email" aria-live="polite"></span>
+        <label for="f-msg">Message*</label>
+        <textarea id="f-msg" name="message" rows="5" placeholder="Enter your message" required></textarea>
+        <span class="err" id="err-msg" aria-live="polite"></span>
+        <button class="btn btn-yellow" type="submit">Submit</button>
+        <p class="form-note">This opens your email app with the message ready to send.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-row">
+      <a class="logo dark" href="#top" aria-label="Back to top">
+        <svg class="logo-star" viewBox="0 0 40 40" aria-hidden="true"><use href="#star" /></svg>
+        <span>Louise<br />Cañedo</span>
+      </a>
+      <div class="footer-social">
+        <span>Find me online:</span>
+        <a href="https://github.com/louise710" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24"><use href="#i-github" /></svg></a>
+        <a href="mailto:louisefrancinemoira.canedo.23@usjr.edu.ph" aria-label="Email"><svg viewBox="0 0 24 24"><use href="#i-mail" /></svg></a>
+      </div>
+    </div>
+    <p class="copyright">© 2026 Louise Francine Moira Cañedo · Cebu City, Philippines</p>
+  </footer>
+
+  <!-- Detail / lightbox dialog -->
+  <dialog class="modal" id="modal" aria-labelledby="modal-title">
+    <button class="modal-close" type="button" aria-label="Close">×</button>
+    <div class="modal-body" id="modal-body"></div>
+    <div class="modal-nav">
+      <button class="arrow" type="button" data-step="-1" aria-label="Previous"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" /></svg></button>
+      <span class="modal-count" id="modal-count"></span>
+      <button class="arrow" type="button" data-step="1" aria-label="Next"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" /></svg></button>
+    </div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- Shared icons -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="star" viewBox="0 0 40 40"><path fill="currentColor" d="M20 0l3.2 13.1L33 4.5l-6.4 11.8L40 20l-13.4 3.7L33 35.5l-9.8-8.6L20 40l-3.2-13.1L7 35.5l6.4-11.8L0 20l13.4-3.7L7 4.5l9.8 8.6z" /></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .5a11.5 11.5 0 00-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 015.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.4-5.27 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0012 .5z" /></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M3 5.5h18v13H3z M3.5 6l8.5 7 8.5-7" /></symbol>
+  </svg>
+
+  <script src="assets/site/main.js" defer></script>
+</body>
+</html>

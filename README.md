@@ -12,6 +12,10 @@
   <a href="https://github.com/louise710"><img src="https://img.shields.io/badge/GitHub-louise710-181717?logo=github&logoColor=white" alt="GitHub"/></a>
 </p>
 
+<p align="center">
+  <a href="https://louise710.github.io/louise710/"><img src="https://img.shields.io/badge/%E2%9C%A6%20View%20my%20interactive%20portfolio-ecdc78?style=for-the-badge&labelColor=33302e&logoColor=33302e" alt="View my interactive portfolio"/></a>
+</p>
+
 ---
 
 ## 👋 About me
@@ -41,7 +45,7 @@ I'm a B.S. Computer Science student at the **University of San Jose–Recoletos*
 
 | Project | What it does | Stack | Links |
 |---|---|---|---|
-| **TIMBLE** (undergraduate thesis) | Hybrid **CSP + PPO reinforcement learning** approach to university timetabling and faculty loading. OR-Tools CP-SAT enforces hard constraints (room capacity, faculty availability, prerequisites); PPO balances timetables and faculty workloads. | Python · OR-Tools CP-SAT · PPO | Private |
+| **TIMBLE** (undergraduate thesis) | Single workspace to plan subject offerings, open sections, and prepare class schedules; estimates subject demand from historical enrollment and curriculum data and suggests section numbers. **Philippine Startup Challenge Central Visayas Top 25 Qualifier** (Team CascadeZero). Uses a hybrid **CSP + PPO reinforcement learning** approach to university timetabling and faculty loading. OR-Tools CP-SAT enforces hard constraints (room capacity, faculty availability, prerequisites); PPO balances timetables and faculty workloads. | Python · OR-Tools CP-SAT · PPO | Private |
 | **AutoQuad** (IPBL 2026) | Computer vision system built with an international project-based learning team for the Autonomous Quadruped Challenge. Team **Stellar-One** received the **Unique Quadro Award**. | — <!-- TODO: stack --> | — <!-- TODO: public URL --> |
 | **Vehicle Plate Number Recognition** | Computer vision pipeline that detects and reads vehicle license plates from images. | — <!-- TODO: stack --> | — <!-- TODO: public URL --> |
 | **Trash Intensification Index (TII)** | NLP techniques to analyze and evaluate trends in waste-related data. | — <!-- TODO: stack --> | — <!-- TODO: public URL --> |
@@ -74,7 +78,7 @@ I'm a B.S. Computer Science student at the **University of San Jose–Recoletos*
 | ©️ **Copyright registration**, Project SISIG (CCR No. 2025-06396-N) | 2025 | |
 
 **In progress**
-- 🔄 Philippine Startup Challenge (PSC) Regional Competition, with TIMBLE (ongoing)
+- 🔄 Philippine Startup Challenge (PSC) Regional Competition: TIMBLE (Team CascadeZero) is a **Central Visayas Top 25 Qualifier** (ongoing)
 - 🔄 TESDA AI Upskilling Training Program (certificate pending)
 
 ---
